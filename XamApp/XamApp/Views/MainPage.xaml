@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Class="XamApp.Views.MainPage">
+
+    <StackLayout>
+
+        <Label 
+            Text="Estructura de la interfaz gráfica: StackLayout y Grid"
+            Margin="20"
+            FontSize="Title"
+            HorizontalTextAlignment="Center"/>
+
+        <Button
+            Text="Ejercicio 1: StackLayout"
+            Margin="20,20,20,10"
+            FontSize="Subtitle"
+            TextColor="White"
+            BackgroundColor="CornflowerBlue"
+            BorderColor="LightGray"
+            BorderWidth="1"
+            CornerRadius="5"
+            Command="{Binding MenuCommand}"
+            CommandParameter="stack"/>
+
+        <Button
+            Text="Ejercicio 2: Grid"
+            Margin="20,20,20,10"
+            FontSize="Subtitle"
+            TextColor="White"
+            BackgroundColor="CornflowerBlue"
+            BorderColor="LightGray"
+            BorderWidth="1"
+            CornerRadius="5"
+            Command="{Binding MenuCommand}"
+            CommandParameter="grid"/>
+
+     
+        
+
+    </StackLayout>
+        
+</ContentPage>
