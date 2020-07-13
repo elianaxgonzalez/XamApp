@@ -29,6 +29,12 @@ namespace XamApp.ViewModels
                 case "grid":
                     Navigation.PushAsync(new GridPage());
                     break;
+                case "form":
+                    Navigation.PushAsync(new BurgerFormPage());
+                    break;
+                case "item":
+                    Navigation.PushAsync(new BurgerItemListPage());
+                    break;
                 default:
                     break;
             }

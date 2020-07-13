@@ -10,7 +10,7 @@
     <StackLayout>
 
         <Label 
-            Text="Estructura de la interfaz gráfica: StackLayout y Grid"
+            Text="Curso APIs - Xamarin Forms Básico"
             Margin="20"
             FontSize="Title"
             HorizontalTextAlignment="Center"/>
@@ -38,6 +38,30 @@
             CornerRadius="5"
             Command="{Binding MenuCommand}"
             CommandParameter="grid"/>
+
+        <Button
+            Text="Ejercicio 3: Formulario"
+            Margin="20,20,20,10"
+            FontSize="Subtitle"
+            TextColor="White"
+            BackgroundColor="CornflowerBlue"
+            BorderColor="LightGray"
+            BorderWidth="1"
+            CornerRadius="5"
+            Command="{Binding MenuCommand}"
+            CommandParameter="form"/>
+
+        <Button
+            Text="Ejercicio 3: Item"
+            Margin="20,20,20,10"
+            FontSize="Subtitle"
+            TextColor="White"
+            BackgroundColor="CornflowerBlue"
+            BorderColor="LightGray"
+            BorderWidth="1"
+            CornerRadius="5"
+            Command="{Binding MenuCommand}"
+            CommandParameter="item"/>
 
      
         
