@@ -37,6 +37,7 @@
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
 
                         <Grid.ColumnDefinitions>
@@ -102,7 +103,8 @@
                             HasShadow="True"
                             Padding="0">
                             <customs:EntryCustom     
-                                HorizontalOptions="FillAndExpand"  />
+                                HorizontalOptions="FillAndExpand"
+                                />
                         </Frame>
 
                     </Grid>
