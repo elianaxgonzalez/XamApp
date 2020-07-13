@@ -9,14 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamApp.iOS", "XamApp\XamApp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XamApp", "XamApp\XamApp\XamApp.csproj", "{4DF5BEDD-A165-49ED-A4BD-22CDA3666665}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{B310AB27-537C-413A-8723-4F3F285F9F53}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\Mis documentos\Documents\Educacion\0 APIS & Xamarin Forms Básico\Asignacion 6\Screenshot_20200712-221121.jpg = ..\..\..\Mis documentos\Documents\Educacion\0 APIS & Xamarin Forms Básico\Asignacion 6\Screenshot_20200712-221121.jpg
-		..\..\..\Mis documentos\Documents\Educacion\0 APIS & Xamarin Forms Básico\Asignacion 6\Screenshot_20200712-221133.jpg = ..\..\..\Mis documentos\Documents\Educacion\0 APIS & Xamarin Forms Básico\Asignacion 6\Screenshot_20200712-221133.jpg
-		..\..\..\Mis documentos\Documents\Educacion\0 APIS & Xamarin Forms Básico\Asignacion 6\Screenshot_20200712-221141.jpg = ..\..\..\Mis documentos\Documents\Educacion\0 APIS & Xamarin Forms Básico\Asignacion 6\Screenshot_20200712-221141.jpg
-		..\..\..\Mis documentos\Documents\Educacion\0 APIS & Xamarin Forms Básico\Asignacion 6\Screenshot_20200712-221148.jpg = ..\..\..\Mis documentos\Documents\Educacion\0 APIS & Xamarin Forms Básico\Asignacion 6\Screenshot_20200712-221148.jpg
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
