@@ -6,5 +6,11 @@ namespace XamApp.ViewModels
 {
     public class BurgerItemListViewModel : BaseViewModel
     {
+        public BurgerItemListViewModel()
+        {
+           
+        }
+
+
     }
 }

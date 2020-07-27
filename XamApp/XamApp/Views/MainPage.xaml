@@ -63,6 +63,18 @@
             Command="{Binding MenuCommand}"
             CommandParameter="item"/>
 
+        <Button
+            Text="Ejercicio 4: Lista de Hamburguesas"
+            Margin="20,20,20,10"
+            FontSize="Subtitle"
+            TextColor="White"
+            BackgroundColor="CornflowerBlue"
+            BorderColor="LightGray"
+            BorderWidth="1"
+            CornerRadius="5"
+            Command="{Binding MenuCommand}"
+            CommandParameter="list"/>
+
      
         
 

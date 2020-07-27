@@ -35,6 +35,9 @@ namespace XamApp.ViewModels
                 case "item":
                     Navigation.PushAsync(new BurgerItemListPage());
                     break;
+                case "list":
+                    Navigation.PushAsync(new BurgerListPage());
+                    break;
                 default:
                     break;
             }
