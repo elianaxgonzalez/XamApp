@@ -4,12 +4,25 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="XamApp.Views.BurgerListPage">
+             x:Class="XamApp.Views.BurgerListPage"             
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="0" Source="Banner3" Aspect="AspectFit" VerticalOptions="Start"/>
+            <Image Grid.Row="0" Source="ic_arrow_back"  Margin="20,30,20,0" HeightRequest="50" HorizontalOptions="Start" VerticalOptions="Start" BackgroundColor="#5513151c"/>
+            <Label Grid.Row="0" Text="Burgers" TextColor="White" FontAttributes="Bold" FontSize="35" Margin="20,165,20,0" BackgroundColor="#222e1815"/>
+
+            <Frame Grid.Row="1" BackgroundColor="White" CornerRadius="20" BorderColor="White" Margin="0,-25,0,0" HeightRequest="20" HasShadow="False"/>
+            <Label Grid.Row="1" Text="56 Restaurants" TextColor="{StaticResource BurgerTitle}" FontAttributes="Bold" FontSize="Large" Margin="20,0"  />
+            <Image Grid.Row="1" Source="ic_menu"  HorizontalOptions="End" />
+
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
