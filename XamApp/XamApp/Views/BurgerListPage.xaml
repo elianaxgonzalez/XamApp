@@ -121,7 +121,7 @@
             <ImageButton 
                 Grid.Row="0" 
                 Source="ic_arrow_back"  
-                Margin="20,30,20,0" 
+                Margin="10,30,20,0" 
                 HeightRequest="50" 
                 HorizontalOptions="Start" 
                 VerticalOptions="Start" 

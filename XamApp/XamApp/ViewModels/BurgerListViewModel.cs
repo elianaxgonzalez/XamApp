@@ -27,7 +27,7 @@ namespace XamApp.ViewModels
             GetResponse();
         }
 
-        async void GetResponse()
+        private void GetResponse()
         {
             try
             {
