@@ -1,17 +1,16 @@
-﻿using Refit;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Net.Http;
-using System.Text;
+using System.Windows.Input;
 using XamApp.Models;
-using XamApp.Services;
+using Xamarin.Forms;
 
 namespace XamApp.ViewModels
 {
     public class BurgerListViewModel : BaseViewModel
     {
+        public ICommand BackButtonCommand { get; set; }
+
         private ObservableCollection<Burger> _burgers = new ObservableCollection<Burger>();
 
         public ObservableCollection<Burger> Burgers
@@ -24,6 +23,7 @@ namespace XamApp.ViewModels
 
         public BurgerListViewModel()
         {
+            BackButtonCommand = new Command( () => Navigation.PopAsync());
             GetResponse();
         }
 
@@ -38,12 +38,48 @@ namespace XamApp.ViewModels
                 {
                     new Burger
                     {
-                        NombreHamburguesa = "Rock Burger",
-                        Categoria = "Burger - Pizza",
-                        Calificacion = (decimal)4.5,
+                        NombreHamburguesa = "Burger Pizza Hub",
+                        Categoria = "Burger - Pizza - Breakfast",
+                        Calificacion = (decimal)4.8,
                         Rating = 121,
                         Favorito = true,
-                        Imagen = "bacon-burger"
+                        Imagen = "LightBurger"
+                    },
+                     new Burger
+                    {
+                        NombreHamburguesa = "Rock Burger",
+                        Categoria = "Burger - Pizza",
+                        Calificacion = (decimal)4.6,
+                        Rating = 98,
+                        Favorito = false,
+                        Imagen = "RockBurger"
+                    },
+                      new Burger
+                    {
+                        NombreHamburguesa = "Prado Burger",
+                        Categoria = "Burger - Breakfast",
+                        Calificacion = (decimal)4.9,
+                        Rating = 176,
+                        Favorito = false,
+                        Imagen = "PradoBurger"
+                    },
+                      new Burger
+                    {
+                        NombreHamburguesa = "Combo Burger",
+                        Categoria = "Burger - Breakfast",
+                        Calificacion = (decimal)4.7,
+                        Rating = 96,
+                        Favorito = true,
+                        Imagen = "ComboBurger"
+                    },
+                      new Burger
+                    {
+                        NombreHamburguesa = "Basic Burger",
+                        Categoria = "Burger - Pizza",
+                        Calificacion = (decimal)4.2,
+                        Rating = 89,
+                        Favorito = false,
+                        Imagen = "BasicBurger"
                     }
 
 

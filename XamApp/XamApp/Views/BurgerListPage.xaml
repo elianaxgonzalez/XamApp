@@ -6,6 +6,105 @@
              mc:Ignorable="d"
              x:Class="XamApp.Views.BurgerListPage"             
              NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="BurgerItemListTemplate">
+                <ViewCell>
+                    <Frame
+            BackgroundColor="{StaticResource BurgerBackground}"
+            CornerRadius="10"
+            HeightRequest="90" 
+            HasShadow="False"
+            Margin="15"
+            VerticalOptions="Start"
+            Padding="10">
+                        <Grid
+                RowSpacing="10"
+                ColumnSpacing="20">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Frame
+                    Grid.Row="0" 
+                    Grid.Column="0"
+                    Grid.RowSpan="3"
+                    CornerRadius="10"
+                    WidthRequest="90"
+                    Padding="0">
+
+                                <Image
+                    Source="{Binding Imagen}"
+                        Aspect="AspectFill"/>
+                            </Frame>
+
+
+                            <Label 
+                    Grid.Row="0" 
+                    Grid.Column="1"
+                    Text="{Binding NombreHamburguesa}"
+                    TextColor="{StaticResource BurgerTitle}"
+                    FontAttributes="Bold"
+                    FontSize="Large"                   
+                    Margin="0,0,20,0"/>
+
+                            <Image 
+                    Grid.Row="0" 
+                    Grid.Column="1"
+                    Source="ic_favorite"
+                    HorizontalOptions="EndAndExpand"
+                    HeightRequest="16">
+                                <Image.Triggers>
+                                    <DataTrigger
+                                TargetType="Image"
+                                Binding="{Binding Favorito}"
+                                Value="False">
+                                        <Setter Property="Source" Value="ic_favorite_border" />
+                                    </DataTrigger>
+                                </Image.Triggers>
+                            </Image>
+
+                            <Label 
+                    Grid.Row="1" 
+                    Grid.Column="1"
+                    Text="{Binding Categoria}"
+                    TextColor="{StaticResource BurgerSubtitle}"
+                    FontSize="Medium"/>
+                            <Image 
+                    Grid.Row="2" 
+                    Grid.Column="1"
+                    Source="ic_star"
+                    HorizontalOptions="Start"
+                    HeightRequest="16"/>
+
+                            <Label 
+                    Grid.Row="2" 
+                    Grid.Column="1"
+                    VerticalOptions="Center"
+                    Margin="20,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Calificacion}" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource BurgerTitle}"/>
+                                        <Span Text=" (" FontSize="Medium" TextColor="{StaticResource BurgerSubtitle}"  />
+                                        <Span Text="{Binding Rating}" FontSize="Medium" TextColor="{StaticResource BurgerSubtitle}"  />
+                                        <Span Text=" ratings)" FontSize="Medium" TextColor="{StaticResource BurgerSubtitle}"  />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                        </Grid>
+                    </Frame>
+                </ViewCell>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <Grid BackgroundColor="White">
             <Grid.RowDefinitions>
@@ -14,14 +113,62 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Image Grid.Row="0" Source="Banner3" Aspect="AspectFit" VerticalOptions="Start"/>
-            <Image Grid.Row="0" Source="ic_arrow_back"  Margin="20,30,20,0" HeightRequest="50" HorizontalOptions="Start" VerticalOptions="Start" BackgroundColor="#5513151c"/>
-            <Label Grid.Row="0" Text="Burgers" TextColor="White" FontAttributes="Bold" FontSize="35" Margin="20,165,20,0" BackgroundColor="#222e1815"/>
+            <Image Grid.Row="0" 
+                   Source="Banner3" 
+                   Aspect="AspectFit" 
+                   VerticalOptions="Start"/>
+            
+            <ImageButton 
+                Grid.Row="0" 
+                Source="ic_arrow_back"  
+                Margin="20,30,20,0" 
+                HeightRequest="50" 
+                HorizontalOptions="Start" 
+                VerticalOptions="Start" 
+                BackgroundColor="#222e1815"
+                Command="{Binding BackButtonCommand}"/>
+            
+            <Label 
+                Grid.Row="0" 
+                Text="Burgers" 
+                TextColor="White" 
+                FontAttributes="Bold" 
+                FontSize="35" 
+                Margin="20,165,20,0" 
+                BackgroundColor="#222e1815"/>
 
-            <Frame Grid.Row="1" BackgroundColor="White" CornerRadius="20" BorderColor="White" Margin="0,-25,0,0" HeightRequest="20" HasShadow="False"/>
-            <Label Grid.Row="1" Text="56 Restaurants" TextColor="{StaticResource BurgerTitle}" FontAttributes="Bold" FontSize="Large" Margin="20,0"  />
-            <Image Grid.Row="1" Source="ic_menu"  HorizontalOptions="End" />
-
+            <Frame 
+                Grid.Row="1" 
+                BackgroundColor="White" 
+                CornerRadius="20" 
+                BorderColor="White" 
+                Margin="0,-25,0,0" 
+                HeightRequest="20" 
+                HasShadow="False"/>
+            
+            <Label 
+                Grid.Row="1" 
+                Text="56 Restaurants" 
+                TextColor="{StaticResource BurgerTitle}" 
+                FontAttributes="Bold" 
+                FontSize="Large" 
+                Margin="20,0" 
+                VerticalTextAlignment="Center" />
+            
+            <ImageButton 
+                Grid.Row="1" 
+                Source="ic_menu"  
+                HorizontalOptions="End" 
+                Margin="20,0" Scale="1.2" 
+                BackgroundColor="White"/>
+            
+            <ListView
+                Grid.Row="2" 
+                ItemsSource="{Binding Burgers}"
+                ItemTemplate="{StaticResource BurgerItemListTemplate}"
+                SeparatorColor="Transparent"
+                HasUnevenRows="True"
+                SelectionMode="None"/>
 
         </Grid>
     </ContentPage.Content>
