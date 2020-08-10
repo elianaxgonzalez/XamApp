@@ -5,15 +5,17 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    x:Class="XamApp.Views.MainPage">
+    x:Class="XamApp.Views.MainPage"
+    NavigationPage.HasNavigationBar="False">
 
     <StackLayout>
 
         <Label 
             Text="Curso APIs - Xamarin Forms Básico"
-            Margin="20"
+            Margin="20,50,20,40"
             FontSize="Title"
-            HorizontalTextAlignment="Center"/>
+            HorizontalTextAlignment="Center"
+            FontAttributes="Bold"/>
 
         <Button
             Text="Ejercicio 1: StackLayout"
@@ -64,7 +66,7 @@
             CommandParameter="item"/>
 
         <Button
-            Text="Ejercicio 4: Lista de Hamburguesas"
+            Text="Ejercicio 4: Ejercicio final del curso - Lista de Hamburguesas"
             Margin="20,20,20,10"
             FontSize="Subtitle"
             TextColor="White"
