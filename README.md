@@ -24,3 +24,13 @@ Pantalla para agregar Hamburguesas a la lista y elemento de la lista
 
 
 
+### APS07: Actividad final de curso
+
+Se construyó la lista de hamburguesas con los temas explicados en el curso. Se incluyó el consumo de la API a través de Refit, pero debido a que se suspendió la inscrición a Azure entonces se tuvo que agregar una lista con información dummy dentro de la app. Esta actividad se encuentra en BurgerListPage.
+
+<table border="0" width="95%" height="auto"><tr>
+<td><center><img src="https://github.com/elianaxgonzalez/XamApp/blob/master/Images/Screenshot_20200810-101812.jpg" border="0" alt="Formulario de Hamburguesas" width="300"></center></td>
+<td><center><img src="https://github.com/elianaxgonzalez/XamApp/blob/master/Images/Screenshot_20200810-101817.jpg" border="0" alt="Formulario de Hamburguesas" width="300"></center></td>
+</tr></table>
+
+
